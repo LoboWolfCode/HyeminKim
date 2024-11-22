@@ -91,7 +91,7 @@ nav {
 .logo {
     font-size: 2rem;
     font-weight: bold;
-    font-family: 'WhyMin';
+    font-family: 'WhyMin', Arial, sans-serif;
 }
 
 .logo1 {
