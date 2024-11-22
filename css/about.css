@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'WhyMin';
-    src: url(fonts/WhyMin.ttf) format('truetype');
+    src: url('fonts/WhyMin.ttf') format('truetype');
   }
 
 html {
@@ -91,7 +91,7 @@ nav {
 .logo {
     font-size: 2rem;
     font-weight: bold;
-    font-family: 'WhyMin', Arial, sans-serif;
+    font-family: 'WhyMin';
 }
 
 .logo1 {
