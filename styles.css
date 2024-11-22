@@ -7,7 +7,7 @@
 @font-face {
     font-family: 'WhyMin';
     src: url('../fonts/WhyMin.ttf') format('truetype');
-  }
+}
 
 html {
   scroll-behavior: smooth;
