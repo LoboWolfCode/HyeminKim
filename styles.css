@@ -131,6 +131,7 @@ nav {
   font-size: 1.2rem;
   color: white;
   cursor: pointer;
+  font-family: "whymin", sans-serif;
   display: none;
   margin-bottom: 1.5rem;
 }
@@ -305,6 +306,9 @@ body {
     }
     & .avatar1{
       grid-row-start: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -440,11 +444,10 @@ img {
   transition: all 0.3s ease-in-out;
   }
   
-  /*img:hover {
+img:hover {
     opacity: 0.5;
     background-color: white;
-
-  }*/
+}
 
 article {
 /*padding: 15px;*/
