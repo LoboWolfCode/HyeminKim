@@ -195,11 +195,105 @@ nav {
 /* Selected Nav ENDS */
 
 
+/* Hero Starts */
+
+.hero {
+  display: grid; 
+  grid-auto-flow: column; 
+  text-align: center;
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 0em 2em; 
+  padding-bottom: 2em;
+  margin-top: 80px;
+  padding-left: 10em;
+  padding-right: 10em;
+}
+
+.hero-pic {
+  border-radius: 50px;
+}
+
+.hero-img {
+  width: 25em;
+}
+
+.hero-h1 {
+  font-family: 'WhyMin', Arial, sans-serif;
+  font-size: 4rem;
+}
+
+.hero-p {
+  font-size: 1.5rem;
+}
+
+/* Hero Ends */
 
 
+/* Index STARTS */
 
+.slider {
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right, 
+    transparent,
+    #000 10% 90%, 
+    transparent
+  );
+}
 
+.slider .list {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative
+}
 
+.slider .list .item {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  animation-delay: calc(10s / var(--quantity) * (var(--position) - 1) )!important;
+}
+
+.slider .list .item img {
+  width: 100%;
+}
+
+@keyframes autoRun {
+  from{
+    left: 100%;
+  }
+  to{
+    left: calc(var(--width) * -1);
+  }
+}
+
+.slider:hover .item{
+  animation-play-state: paused!important;
+}
+
+.slider[reverse="true"] .item {
+  animation: reversePlay 10s linear infinite;
+} 
+
+@keyframes reversePlay {
+  from{
+    left: calc(var(--width) * -1);
+  }to {
+    left: 100%;
+  }
+}
+
+.list1 {
+  box-shadow: none;
+}
+
+/* Index ENDS */
 
 
 /* Gallery STARTS */
@@ -245,6 +339,25 @@ article {
 break-inside: avoid-column;
 margin-bottom: 1rem; 
 }
+
+/* Fade-in Animation STARTS*/
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+article {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+/* Fade-in Animation STARTS*/
 
 /* Gallery Styles */
 .img-container {
@@ -599,6 +712,21 @@ footer {
   }
   .con-sec {
     font-size: 1.5rem;
+  }
+  .hero {
+    grid-auto-flow: row; 
+    grid-template-columns: 1fr; 
+    align-items: center;
+    gap: 0em 0em; 
+    padding-bottom: 0em;
+    margin-top: 80px;
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+  .hero-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
