@@ -34,6 +34,7 @@ html::-webkit-scrollbar-thumb {
     --img-div-shadow: #c5a488;    /* Lighter Latte Brown */
     --border-color: #a97b50;      /* Espresso Brown */
     --text-color: #4b2e18;        /* Dark Roast Brown */
+    --button-color: #201208;
     --x-icon: #7c5533;            /* Mocha Brown */
     --ig-icon: #7c5533;           /* Mocha Brown */
     --in-icon: #7c5533;           /* Mocha Brown */
@@ -47,7 +48,8 @@ html::-webkit-scrollbar-thumb {
     --bg-color: #1a120c;          /* Dark Coffee Bean */
     --img-div: #4b2e18;           /* Dark Roast Brown */
     --border-color: #7c5533;      /* Mocha Brown */
-    --text-color: #e5d2c0;        /* Light Cappuccino Cream */
+    --text-color: #e5d2c0;  
+    --button-color: #c6b5a5;      /* Light Cappuccino Cream */
     --x-icon: #d4a373;            /* Caramel Brown */
     --ig-icon: #d4a373;           /* Caramel Brown */
     --in-icon: #d4a373;           /* Caramel Brown */
@@ -245,6 +247,10 @@ body {
       margin-top: 30px;
       display: block;
       width: max-content;
+    }
+    a:hover{
+      color: var(--button-color);
+      border: 1px solid var(--button-color);
     }
   }
   & .avatar1{
