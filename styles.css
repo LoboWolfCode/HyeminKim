@@ -287,8 +287,8 @@ body {
       & .info1{
         background-color: transparent;
         color: var(--text-color);
-        /*display: grid;*/
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        /*grid-template-columns: repeat(2, 1fr);*/
         text-align: center;
         gap: 20px;
         padding: 4px 10px 10px 10px;
