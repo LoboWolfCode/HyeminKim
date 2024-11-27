@@ -11,9 +11,9 @@
 
 html {
   scroll-behavior: smooth;
-  /*max-width: 1920px;
+  max-width: 1920px;
   max-height: 1080px;
-  margin: auto;*/
+  margin: auto;
 }
 
 html::-webkit-scrollbar {
