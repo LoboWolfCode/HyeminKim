@@ -813,7 +813,10 @@ footer {
 
 
 
-
+.barcode{
+    font-family:Courier;
+    white-space:pre;
+}
 
 
 
