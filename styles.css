@@ -483,6 +483,9 @@ column-gap: 20px;
 article {
 break-inside: avoid-column;
 margin-bottom: 1rem; 
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 /* Fade-in Animation STARTS*/
