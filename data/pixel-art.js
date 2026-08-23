@@ -28,6 +28,23 @@
    Careful: keep the commas and quotes exactly as they are.
    =========================================================================== */
 
+/* ---------------------------------------------------------------------------
+   PROFILE PICTURE
+
+   The big image on the home page. It is pinned here rather than taken from the
+   artwork list below, so adding new work never bumps it off — that is what
+   makes it permanent.
+
+     file    - filename inside pixel/ .
+     caption - optional text under it. Leave it out and no caption shows.
+
+   Set this to null to fall back to the newest featured artwork instead.
+   --------------------------------------------------------------------------- */
+
+window.PIXEL_PROFILE = {
+  file: 'Me.png'
+};
+
 window.PIXEL_ART = [
   { file: 'Under_the_Surface.png', featured: true },
   { file: 'Hidden_in_Green.png', featured: true },

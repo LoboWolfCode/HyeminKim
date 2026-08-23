@@ -203,22 +203,36 @@
       }
     }
 
-    // Big home page image: whichever piece is featured first in the manifest,
-    // so the home page follows the list instead of a hardcoded filename.
+    // Big home page image: the pinned profile picture if one is set, otherwise
+    // the newest featured artwork. Pinning is what keeps it from being bumped
+    // every time new work is added to the top of the list.
     var hero = document.querySelector('[data-hero]');
-    if (hero && items.length) {
-      var lead = items.filter(function (item) {
+    var profile = window.PIXEL_PROFILE;
+
+    if (hero && (profile || items.length)) {
+      var lead = profile || items.filter(function (item) {
         return item.featured;
       })[0] || items[0];
 
       var heroImg = hero.querySelector('img');
       var heroCap = hero.querySelector('figcaption');
+
       if (heroImg) {
-        heroImg.alt = titleOf(lead);
+        heroImg.alt = profile ? 'Hyemin Kim' : titleOf(lead);
         withThumb(heroImg, lead.file);
         setScalingMode(heroImg);
       }
-      if (heroCap) heroCap.textContent = titleOf(lead);
+
+      if (heroCap) {
+        // A profile picture only gets a caption if one is written for it;
+        // artwork falls back to its title.
+        var cap = profile ? profile.caption : titleOf(lead);
+        if (cap) {
+          heroCap.textContent = cap;
+        } else {
+          heroCap.hidden = true;
+        }
+      }
     }
 
     var strip = document.querySelector('[data-featured]');
