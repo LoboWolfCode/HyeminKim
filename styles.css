@@ -162,15 +162,11 @@ a:focus-visible {
   color: var(--panel);
 }
 
-/* The full-size lightbox view is always an upscale, so it is always crisp. */
-.lb-image {
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-}
-
-/* Cards and the hero get nearest-neighbour only when the image is being blown
-   UP (a small native sprite). gallery.js adds .is-upscaled after measuring —
-   see setScalingMode(). Shrinking a large export stays smooth. */
+/* Nearest-neighbour only when an image is being blown UP (a small native
+   sprite) — that is what makes pixel art crisp. Shrinking a large export
+   stays smooth, because dropping most of its pixels aliases the linework.
+   gallery.js measures each image and adds .is-upscaled; it does this for the
+   lightbox too, where a 6000px file is squeezed into the viewport. */
 .pixel-img.is-upscaled {
   image-rendering: pixelated;
   image-rendering: crisp-edges;

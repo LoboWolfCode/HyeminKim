@@ -3,10 +3,10 @@
 
    HOW TO ADD A PIECE
    1. Name the image file after the artwork, using underscores for spaces:
-        Tidal_Glow.jpg   ->   shown on the site as "Tidal Glow"
+        Tidal_Glow.png   ->   shown on the site as "Tidal Glow"
    2. Put it in the  pixel/  folder.
    3. Add a line at the TOP of the list below (newest first):
-        { file: 'Tidal_Glow.jpg', featured: true },
+        { file: 'Tidal_Glow.png', featured: true },
    4. Run  python tools/make-thumbs.py
    5. Save. Refresh the site. Done.
 
@@ -23,14 +23,14 @@
                 The first featured piece is also the big home page image.
 
    A fuller entry, if you want one:
-     { file: 'Tidal_Glow.jpg', year: 2026, tags: ['scenes'], featured: true },
+     { file: 'Tidal_Glow.png', year: 2026, tags: ['scenes'], featured: true },
 
    Careful: keep the commas and quotes exactly as they are.
    =========================================================================== */
 
 window.PIXEL_ART = [
-  { file: 'Under_the_Surface.jpg', featured: true },
-  { file: 'Hidden_in_Green.jpg', featured: true },
-  { file: 'Tidal_Glow.jpg', featured: true },
+  { file: 'Under_the_Surface.png', featured: true },
+  { file: 'Hidden_in_Green.png', featured: true },
+  { file: 'Tidal_Glow.png', featured: true },
   { file: 'Manta_Ray_Dive.jpg', featured: true }
 ];

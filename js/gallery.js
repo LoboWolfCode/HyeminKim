@@ -48,6 +48,36 @@
     }
     if (img.complete) decide();
     img.addEventListener('load', decide);
+
+    // Re-measure whenever the element is resized — the lightbox animates its
+    // frame open, and the viewport can change under us.
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(decide).observe(img);
+    }
+  }
+
+  // The lightbox <img> is created by lightbox2 and reused across openings, so
+  // watch for it instead of wiring it up at build time. Without this the
+  // full-size view would use nearest-neighbour even when shrinking a 6000px
+  // export down to fit the screen, which aliases the artwork badly.
+  function watchLightbox() {
+    if (!('MutationObserver' in window)) return;
+    new MutationObserver(function (mutations) {
+      mutations.forEach(function (m) {
+        for (var i = 0; i < m.addedNodes.length; i++) {
+          var n = m.addedNodes[i];
+          if (n.nodeType !== 1) continue;
+          var img = n.classList && n.classList.contains('lb-image')
+            ? n
+            : n.querySelector && n.querySelector('.lb-image');
+          if (img && !img.dataset.scaled) {
+            img.dataset.scaled = '1';
+            img.classList.add('pixel-img');
+            setScalingMode(img);
+          }
+        }
+      });
+    }).observe(document.body, { childList: true, subtree: true });
   }
 
   function emptyState(message) {
@@ -156,6 +186,8 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    watchLightbox();
+
     var grid = document.querySelector('[data-gallery]');
     if (grid) {
       if (!items.length) {
