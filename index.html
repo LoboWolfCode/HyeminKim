@@ -1,241 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>김혜민 | Hyemin Kim</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
-    <link href="lightbox/lightbox2-dev/dist/css/lightbox.css" rel="stylesheet" />
-    <link rel="icon" href="logo\hm_logo.png" type="hm_logo.png"/>
-    <script type="text/javascript" src="darkmode.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <title>김혜민 | Hyemin Kim — Pixel Artist</title>
+    <meta name="description" content="Pixel art by Hyemin Kim — sprites, scenes and animation.">
+    <link rel="icon" href="logo/hm_logo.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link href="lightbox/lightbox2-dev/dist/css/lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Not deferred: sets the palette before first paint so there's no flash. -->
+    <script src="js/theme.js"></script>
+    <script src="js/motion.js"></script>
+</head>
+<body>
 
     <!-- Nav Bar STARTS -->
     <nav>
-        <a class="logo1" href="#"><div class="logo"><Span class="kr">김혜민</Span> | Hyemin Kim</div></a>
+        <a class="logo-link" href="index.html"><span class="kr">김혜민</span> | HYEMIN KIM</a>
         <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i> 
-        </label>
+        <label for="check" class="checkbtn" aria-label="Menu"><i class="fas fa-bars"></i></label>
         <ul class="nav-links">
-            <li><a class="selected" id="about" href="#">About</a></li>
-            <li><a id="sketches" href="pages/sketches.html">Sketches</a></li>
-            <li><a id="art" href="pages/art.html">Art</a></li>
-            <li><a id="animations" href="pages/animations.html">Animations</a></li>
-            <li><a id="designs" href="pages/designs.html">Designs</a></li>
-            <li><a id="videos" href="pages/videos.html">Videos</a></li>
-            <li><a id="pictures" href="pages/pictures.html">Pictures</a></li>
-            <li><a id="contact" href="pages/contact.html">Contact</a></li>
-            <li>
-                <div class="icon-links">
-                    <button id="theme-switch">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-                        </button>
-                </div>
-            </li>
+            <li><a class="selected" href="index.html">Home</a></li>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/cv.html">CV</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><button id="theme-switch" type="button">CREAM</button></li>
         </ul>
     </nav>
     <!-- Nav Bar ENDS -->
 
-<body>
-
-    <!-- About Section STARTS -->
-
-    <h3 class="gal-sec" id="gallery">About</h3>
-
-    <main></main>
-
-    <div class="home1">
-        <div class="content1">
-             
-            
-            <div class="name1">
-                <!--MY NAME IS--> <span>HYEMIN KIM</span>
-            </div>
-            <div class="des1">
-                Hi, I'm Hyemin Kim, a visual storyteller crafting immersive worlds, captivating characters, and heartfelt emotions through animation and design. With a passion for directing and designing, I bring stories to life, frame by frame.
-            </div>
-            <a class="dlcv" href="cv\Hyemin Kim CV_2026.pdf" target="_blank" rel="noopener noreferrer">Download My CV</a>
-        </div>
-        <div class="avatar1">
-            <div class="card1">
-                <div class="img-container">
-                    <a href="art\Jellyfish.png" class="TB" data-lightbox="image-0" data-title="Jellyfish"><img src="art\Jellyfish.png"></a>
-                    <div class="text">Jellyfish</div>
-                </div>
-               <!-- 
-                <div class="info1">
-                    <div>카 메 라  감 독<span class="barcode"></span> / 아 티 스 트
-                        <br> 
-                        Camera Director<span class="barcode"></span> / Artist</div>
-                    <div>Director</div>
-                    <div>Animator</div>
-                    <div>Visual Storyteller</div>
-                    <div>Artist</div>
-                    <div style="font-style: italic">Korean</div>
-                -->
-                </div>
+    <!-- Hero STARTS -->
+    <header class="wrap hero">
+        <div>
+            <h1 class="hero-name"><span data-typed>HYEMIN KIM</span><span class="caret">_</span></h1>
+            <p class="hero-role reveal">PIXEL ARTIST &middot; <span class="kr">픽셀 아티스트</span></p>
+            <p class="hero-bio reveal">
+                I build small worlds out of single pixels — sprites, scenes and
+                little animations, placed one square at a time.
+            </p>
+            <div class="hero-actions reveal">
+                <a class="btn" href="pages/gallery.html">VIEW GALLERY</a>
+                <a class="btn" href="pages/contact.html">GET IN TOUCH</a>
             </div>
         </div>
-    </div>
 
-    <!--<div class="hero">
-        <div class="hero-text">
-            <h1 class="hero-h1">Director, Animator, Artist</h1>
-            <p class="hero-p">Hi, I'm Hyemin Kim, a visual storyteller crafting immersive worlds, captivating characters, and heartfelt emotions through animation and design. With a passion for directing and designing, I bring stories to life, frame by frame.</p>
+        <div class="hero-art">
+            <figure data-hero>
+                <img class="pixel-img" src="pixel/thumbs/Under_the_Surface.webp" alt="Featured pixel artwork">
+                <figcaption>latest piece</figcaption>
+            </figure>
         </div>
-        
-        <div class="hero-img">
-            <article>
-                <div class="img-container">
-                    <a href="pictures\cute man in the sea.jpg" data-lightbox="image-0" data-title="Cute Man in the Sea"><img class="hero-pic" src="pictures\cute man in the sea.jpg"></a>
-                    <div class="text">Cute Man in the Sea</div>
-                </div>
-              </article>
+    </header>
+    <!-- Hero ENDS -->
+
+    <!-- Featured strip STARTS -->
+    <main class="wrap">
+        <div class="strip-head reveal">
+            <h2>SELECTED WORK</h2>
+            <a href="pages/gallery.html">see everything &rarr;</a>
         </div>
-    </div>-->
-
-    <div class="slider" style="
-        --width: 100px;
-        --height: 50px;
-        --quantity: 10;
-    ">
-        <div class="list">
-            <div class="item" style="--position: 1"><img class="list1" src="slider\logic-dark.png" alt=""></div>
-            <div class="item" style="--position: 2"><img class="list1" src="slider\davinci-dark.png" alt=""></div>
-            <div class="item" style="--position: 3"><img class="list1" src="slider\final-dark.png" alt=""></div>
-            <div class="item" style="--position: 4"><img class="list1" src="slider\procreate-dark.png"class="list1" alt=""></div>
-            <div class="item" style="--position: 5"><img class="list1" src="slider\aftereffects-dark.png" alt=""></div>
-            <div class="item" style="--position: 6"><img class="list1" src="slider\adobeillustrator-dark.png" alt=""></div>
-            <div class="item" style="--position: 7"><img class="list1" src="slider\office-dark.png" alt=""></div>
-            <div class="item" style="--position: 8"><img class="list1" src="slider\photoshop-dark.png" alt=""></div>
-            <div class="item" style="--position: 9"><img class="list1" src="slider\gimp-dark.png" alt=""></div>
-            <div class="item" style="--position: 10"><img class="list1" src="slider\film-dark.png" alt=""></div>
-        </div>
-    </div>
-
-<div class="slider" reverse="true" style="
-        --width: 200px;
-        --height: 200px;
-        --quantity: 10;
-    ">
-        <div class="list">
-            <div class="item" style="--position: 1">
-              <article>
-                <div class="img-container">
-                    <a href="sketches\cat.jpg" data-lightbox="image-1" data-title="Cat"><img src="slider\cat.jpg"></a>
-                    <div class="text">Cat</div>
-                </div>
-              </article>
-            </div>
-
-            <div class="item" style="--position: 2">
-                <article>
-                    <div class="img-container">
-                        <a href="art\city mood.jpg" data-lightbox="image-1" data-title="City Mood"><img src="slider\city mood.jpg"></a>
-                        <div class="text">City Mood</div>
-                    </div>
-                  </article>
-            </div>
-
-            <div class="item" style="--position: 3">
-                <article>
-                    <div class="img-container">
-                        <a href="art\dominated.jpg" data-lightbox="image-1" data-title="Dominated"><img src="slider\dominated.jpg"></a>
-                        <div class="text">Dominated</div>
-                    </div>
-                  </article>
-            </div>
-
-            <div class="item" style="--position: 4">
-                <article>
-                    <div class="img-container">
-                        <a href="art\fall in love with coffee.jpg" data-lightbox="image-1" data-title="Fall in Love with Coffee"><img src="slider\fall in love with coffee.jpg"></a>
-                        <div class="text">Fall in Love with Coffee</div>
-                    </div>
-                  </article>
-            </div>
-            
-            <div class="item" style="--position: 5">
-                <article>
-                    <div class="img-container">
-                        <a href="sketches\FUXK!.jpg" data-lightbox="image-1" data-title="FUXK!"><img src="slider\FUXK!.jpg"></a>
-                        <div class="text">FUXK!</div>
-                    </div>
-                  </article>
-            </div>
-
-            <div class="item" style="--position: 6">
-                <article>
-                    <div class="img-container">
-                        <a href="art\lost space.jpg" data-lightbox="image-1" data-title="Lost Space"><img src="slider\lost space.jpg"></a>
-                        <div class="text">Lost Space</div>
-                    </div>
-                  </article>
-            </div>
-
-            <div class="item" style="--position: 7">
-                <article>
-                    <div class="img-container">
-                        <a href="animations\movingabouthair.gif" data-lightbox="image-1" data-title="Moving Hair"><img src="slider\movingabouthair.gif"></a>
-                        <div class="text">Moving Hair</div>
-                    </div>
-                  </article>
-            </div>
-
-            <div class="item" style="--position: 8">
-                <article>
-                    <div class="img-container">
-                        <a href="pictures\OAO.jpg" data-lightbox="image-1" data-title="OAO"><img src="slider\OAO.jpg"></a>
-                        <div class="text">OAO</div>
-                    </div>
-                  </article>
-            </div>
-
-            <div class="item" style="--position: 9">
-                <article>
-                    <div class="img-container">
-                        <a href="pictures\small pond.jpg" data-lightbox="image-1" data-title="Small Pond"><img src="slider\small pond.jpg"></a>
-                        <div class="text">Small Pond</div>
-                    </div>
-                  </article>
-            </div>
-
-            <div class="item" style="--position: 10">
-                <article>
-                    <div class="img-container">
-                        <a href="animations\thisislove.gif" data-lightbox="image-1" data-title="This is Love"><img src="slider\thisislove.gif"></a>
-                        <div class="text">This is Love</div>
-                    </div>
-                  </article>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- About Section ENDS -->
+        <div class="gallery-grid" data-featured></div>
+    </main>
+    <!-- Featured strip ENDS -->
 
     <footer>
-        <br>
         <div class="icon-links">
-            <a target="_blank" href="#" class="fa-brands fa-x-twitter" style="font-size: 0.8em"></a>
-            <a target="_blank" href="https://www.instagram.com/011.010.1011.0110.11.22/" class="fab fa-instagram" style="font-size: 0.8em"></a>
-            <a target="_blank" href="#" class="fa-brands fa-linkedin-in" style="font-size: 0.8em"></a>
-            <a target="_blank" href="mailto: kimhyemin.art@gmail.com" class="fa-regular fa-envelope" style="font-size: 0.8em"></a>
-          </div>
-        <br>
-        <p class="san-and">Designed by <a class="lobito" target="_blank" href="https://sandrolobo.com/">Sandro Lobo</a></p>
-        <p class="min-and">&copy; 2025 김혜민 | Hyemin Kim | All rights reserved</p>
-      </footer>
-    
+            <a target="_blank" rel="noopener" href="https://www.instagram.com/minimin._.12/" class="fab fa-instagram" aria-label="Instagram"></a>
+            <a href="mailto:hyeminkimArt12@gmail.com" class="fa-regular fa-envelope" aria-label="Email"></a>
+        </div>
+        <p>&copy; 2026 <span class="kr">김혜민</span> | Hyemin Kim | All rights reserved</p>
+    </footer>
 
+    <script src="lightbox/lightbox2-dev/dist/js/lightbox-plus-jquery.js"></script>
+    <script src="data/pixel-art.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
-
-<script src="lightbox/lightbox2-dev/dist/js/lightbox-plus-jquery.js"></script>
-
-
 </html>

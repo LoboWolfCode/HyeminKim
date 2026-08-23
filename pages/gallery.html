@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | 김혜민 Hyemin Kim</title>
+    <meta name="description" content="Pixel art gallery — sprites, scenes and animation by Hyemin Kim.">
+    <link rel="icon" href="../logo/hm_logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link href="../lightbox/lightbox2-dev/dist/css/lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/motion.js"></script>
+</head>
+<body>
+
+    <!-- Nav Bar STARTS -->
+    <nav>
+        <a class="logo-link" href="../index.html"><span class="kr">김혜민</span> | HYEMIN KIM</a>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn" aria-label="Menu"><i class="fas fa-bars"></i></label>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a class="selected" href="gallery.html">Gallery</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button id="theme-switch" type="button">CREAM</button></li>
+        </ul>
+    </nav>
+    <!-- Nav Bar ENDS -->
+
+    <!-- Gallery STARTS -->
+    <main class="wrap">
+        <h1 class="page-title">GALLERY</h1>
+        <p class="page-sub">Click any piece to see it full size.</p>
+
+        <div class="filters" data-filters></div>
+        <div class="gallery-grid" data-gallery></div>
+    </main>
+    <!-- Gallery ENDS -->
+
+    <footer>
+        <div class="icon-links">
+            <a target="_blank" rel="noopener" href="https://www.instagram.com/minimin._.12/" class="fab fa-instagram" aria-label="Instagram"></a>
+            <a href="mailto:hyeminkimArt12@gmail.com" class="fa-regular fa-envelope" aria-label="Email"></a>
+        </div>
+        <p>&copy; 2026 <span class="kr">김혜민</span> | Hyemin Kim | All rights reserved</p>
+    </footer>
+
+    <script src="../lightbox/lightbox2-dev/dist/js/lightbox-plus-jquery.js"></script>
+    <script src="../data/pixel-art.js"></script>
+    <script src="../js/gallery.js"></script>
+</body>
+</html>
