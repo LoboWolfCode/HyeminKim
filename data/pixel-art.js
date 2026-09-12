@@ -19,8 +19,8 @@
              The buttons build themselves from the tags actually used here.
              With no tags anywhere, the filter bar hides itself.
      note  - a longer caption, shown in the lightbox. Optional.
-     featured - true puts it on the home page strip. Optional.
-                The first featured piece is also the big home page image.
+     featured - true puts it on the home page strip, which shows the newest
+                4 of them. Everything else stays in the full gallery. Optional.
 
    A fuller entry, if you want one:
      { file: 'Tidal_Glow.png', year: 2026, tags: ['scenes'], featured: true },
@@ -46,6 +46,7 @@ window.PIXEL_PROFILE = {
 };
 
 window.PIXEL_ART = [
+  { file: 'Afternoon.png', featured: true },
   { file: 'Under_the_Surface.png', featured: true },
   { file: 'Hidden_in_Green.png', featured: true },
   { file: 'Tidal_Glow.png', featured: true },

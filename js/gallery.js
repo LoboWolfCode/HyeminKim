@@ -2,7 +2,7 @@
 
    Mount points, both optional per page:
      [data-gallery]  - full grid, plus [data-filters] for the tag buttons
-     [data-featured] - home page strip, shows items marked featured:true
+     [data-featured] - home page strip, the newest 4 marked featured:true
 
    Paths are resolved against <html data-root="..."> so the same script works
    from the site root and from pages/. */
@@ -237,12 +237,15 @@
 
     var strip = document.querySelector('[data-featured]');
     if (strip) {
+      // The home page shows only the newest few — the list is newest-first, so
+      // this is the top of it. "see everything" goes to the full gallery.
+      var STRIP_MAX = 4;
       var featured = items.filter(function (item) {
         return item.featured;
       });
       // Fall back to the newest few so the home page is never blank.
-      if (!featured.length) featured = items.slice(0, 3);
-      featured.slice(0, 6).forEach(function (item) {
+      if (!featured.length) featured = items;
+      featured.slice(0, STRIP_MAX).forEach(function (item) {
         strip.appendChild(card(item, 'featured'));
       });
     }
