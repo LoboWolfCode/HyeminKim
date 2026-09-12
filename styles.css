@@ -262,13 +262,38 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  /* The extra top padding is the iPhone status-bar strip. With
-     viewport-fit=cover the page draws behind it, so without this the artwork
-     shows through above the bar instead of the bar's own background.
-     env() is 0 everywhere else, so desktop is unaffected. */
+  /* Only does anything when the page really is drawn under the status bar,
+     i.e. installed to the home screen. In plain mobile Safari this is 0 and
+     the strip is handled by ::before below. Desktop is unaffected either. */
   padding: calc(1rem + env(safe-area-inset-top, 0px))
            clamp(1rem, 4vw, 2.5rem)
            1rem;
+}
+
+/* The iPhone status-bar strip.
+
+   Once Safari's toolbars retract on scroll it paints the page up behind the
+   status bar, but top:0 still anchors to the SMALL viewport, whose top is
+   below it — so the artwork was seen scrolling past in the strip above the
+   bar. env(safe-area-inset-top) does not help: mobile Safari reports it as 0
+   even while drawing up there.
+
+   So rather than measure the strip, cover it. This hangs above the bar in the
+   bar's own colour, tall enough for any status bar, and is clipped by the top
+   of the screen. Where there is no strip it simply sits off-screen, which is
+   every desktop browser and Safari with its toolbars out. Content above the
+   viewport adds no scroll, so nothing else shifts.
+
+   It sits under .nav-links, which is the same colour, so the open menu reads
+   as one solid panel up there too. */
+nav::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 120px;
+  background-color: var(--nav-bg);
 }
 
 .logo-link {
