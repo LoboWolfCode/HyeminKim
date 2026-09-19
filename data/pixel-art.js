@@ -46,6 +46,8 @@ window.PIXEL_PROFILE = {
 };
 
 window.PIXEL_ART = [
+  { file: 'Look.JPG', featured: true },
+  { file: 'Bye.JPG', featured: true },
   { file: 'Afternoon.png', featured: true },
   { file: 'Under_the_Surface.png', featured: true },
   { file: 'Hidden_in_Green.png', featured: true },
