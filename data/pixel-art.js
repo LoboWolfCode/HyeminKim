@@ -46,6 +46,8 @@ window.PIXEL_PROFILE = {
 };
 
 window.PIXEL_ART = [
+  { file: 'Hikikomori.jpeg', featured: true },
+  { file: 'Meow.jpeg', featured: true },
   { file: 'Look.JPG', featured: true },
   { file: 'Bye.JPG', featured: true },
   { file: 'Afternoon.png', featured: true },
