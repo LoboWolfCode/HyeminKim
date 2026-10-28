@@ -46,6 +46,13 @@ window.PIXEL_PROFILE = {
 };
 
 window.PIXEL_ART = [
+  { file: 'Backyard.jpg', featured: true },
+  { file: 'Maple_Leaf.jpg', featured: true },
+  { file: 'Checkmate.jpg', featured: true },
+  { file: 'Every_Morning.jpg', featured: true },
+  { file: 'Sunkiss.jpg', featured: true },
+  { file: 'Mul_Manan_Mulgogi.jpg', featured: true },
+  { file: 'Tear_Couture.jpg', featured: true },
   { file: 'Hikikomori.jpeg', featured: true },
   { file: 'Meow.jpeg', featured: true },
   { file: 'Look.JPG', featured: true },
